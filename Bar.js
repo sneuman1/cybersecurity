@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from 'react-native';
 import AppName from "./AppName";
-import Setting from "./Setting";
+import Setting from "./Login";
 
 function Bar() {
     return(
