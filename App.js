@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, Button, setUserLoggedIn } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Counter from './Counter.js';
 import SettingsScreen from './SettingsScreen.js';
 import Home from './Home.js';
@@ -63,8 +62,10 @@ if(userLoggedIn){
       
 }
  else {
-  return (<Login/>); 
-}
+  return ( 
+    <Login setUserLoggedIn={setUserLoggedIn}/>
+    ) 
+  }
 } 
 
 

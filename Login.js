@@ -1,31 +1,20 @@
-import React from "react";
-import { StyleSheet, Text, View, Image, Alert,   } from 'react-native';
-import { Card, ListItem, Button, Icon } from 'react-native-elements';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { SafeAreaView, TextInput } from "react-native";
-
-const Login = () => {
-  const [text, onChangeText] = React.useState("Enter Phone Number");
-  const [number, onChangeNumber] = React.useState(null);
+import React from 'react';
+import {StyleSheet, View, Text, Button} from 'react-native';
 
 
-    return(
-      <SafeAreaView>
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeText}
-        value={text}
-      />
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeNumber}
-        value={number}
-        placeholder="Phone Number"
-        keyboardType="numeric"
-      />
-    </SafeAreaView>
+export default function Login(props) 
+{
+  return(
+    <View>
+      <Text>This is the Login Screen</Text>
+      <Button title="Log In" onPress={()=>props.setUserLoggedIn(true)}></Button>
+
+    </View>
   );
-};
+}
+
+
+
 
 
 const styles = StyleSheet.create({
@@ -36,5 +25,5 @@ const styles = StyleSheet.create({
     padding: 10,
   },
 });
-  
-  export default Login;
+
+
